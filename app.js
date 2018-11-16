@@ -11,9 +11,11 @@ app.set('view engine', 'handlebars');
 
 const main = require('./routes/home/main');
 const admin = require('./routes/admin/admin');
-
+const post = require('./routes/admin/posts');
+ 
 app.use('/', main);
 app.use('/admin', admin);
+app.use('/admin/posts', post);
 
 app.listen(5500, ()=>{
   console.log(`listening on the port 5500`);
